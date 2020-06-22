@@ -4,6 +4,7 @@ class DogOfTheDay::CLI
   def call 
     list_dogs
     menu
+    goodbye
   end
   
   def list_dogs
@@ -22,28 +23,38 @@ class DogOfTheDay::CLI
   end
   
   def menu
-    puts "Enter the number of the dog you would like more info on:"
-    input = gets.strip
-    case input
-    when "1"
-      puts "More info on dog 1..."
-    when "2"
-      puts "More info on dog 2..."
-    when "3"
-      puts "More info on dog 3..."
-    when "4"
-      puts "More info on dog 4..."
-    when "5"
-      puts "More info on dog 5..."
-    when "6"
-      puts "More info on dog 6..."
-    when "7"
-      puts "More info on dog 7..."
-    when "8"
-      puts "More info on dog 8..."
-    when "9"
-      puts "More info on dog 9..."
+    input = nil
+    while input != "exit"
+      puts "Enter the number of the dog you would like more info on or type list to see the dogs again or type exit:"
+      input = gets.strip.downcase
+      case input
+      when "1"
+        puts "More info on dog 1..."
+      when "2"
+        puts "More info on dog 2..."
+      when "3"
+        puts "More info on dog 3..."
+      when "4"
+        puts "More info on dog 4..."
+      when "5"
+        puts "More info on dog 5..."
+      when "6"
+        puts "More info on dog 6..."
+      when "7"
+        puts "More info on dog 7..."
+      when "8"
+        puts "More info on dog 8..."
+      when "9"
+        puts "More info on dog 9..."
+      when "list"
+          list_dogs
+        else
+          puts "Not sure what dog you want, type list or exit."
+      end
     end
   end
   
+  def goodbye
+    puts "See you tomorrow for more dogs!"
+  end
 end
