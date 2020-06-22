@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative './lib/dog_of_the_day'
+require_relative '../lib/dog_of_the_day'
 
 DogOfTheDay::CLI.new.call
