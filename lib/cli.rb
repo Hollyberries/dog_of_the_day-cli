@@ -9,7 +9,7 @@ class DogOfTheDay::CLI
   
   def list_dogs
     puts "Today's Dog Of The Day:"
-    puts <<-DOC
+    puts <<-LIST
      1. Boss - Chihuahua - 3 years
      2. Tidus - Boxer English Bulldog mix - 2 years
      3. Milo - Shih Tzu - 10 months
@@ -18,7 +18,7 @@ class DogOfTheDay::CLI
      6. Blackie - American Cocker Spaniel - 4 months
      7. Bola - German Shepard Border Collie mix - 11 years
      8. Manchawi - Xoloitzcuintle - 10 years
-     DOC
+     LIST
   end
   
   def menu
@@ -52,6 +52,6 @@ class DogOfTheDay::CLI
   end
   
   def goodbye
-    puts "See you tomorrow for more dogs!"
+    puts "Come back tomorrow for more dogs!"
   end
 end

@@ -1,5 +1,7 @@
 class DogOfTheDay::Dog
   
+  attr_accessor :name, :breed, :age, :url
+  
   def self.today
     puts <<-DOC
      1. Boss - Chihuahua - 3 years
