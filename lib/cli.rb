@@ -20,9 +20,10 @@ class DogOfTheDay::CLI
     while input != "exit"
       puts "Enter the number of the dog you would like more info on or type list to see the dogs again or type exit:"
       input = gets.strip.downcase
-      if input.to_i > 0 
-        puts @dogs[input.to_i-1]
-       elsif
+      if input.to_i > 0
+        the_dog = @dogs[input.to_i-1]
+        puts "#{num}. #{dog.name} - #{dog.breed} - #{dog.age}"
+      elsif
        input == "list"
         list_dogs
         else
