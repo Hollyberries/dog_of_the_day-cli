@@ -52,6 +52,6 @@ class DogOfTheDay::CLI
   end
   
   def goodbye
-    puts "Come back tomorrow for more dogs!"
+    puts "See you tomorrow for more dogs!"
   end
 end
