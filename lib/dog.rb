@@ -3,16 +3,6 @@ class DogOfTheDay::Dog
   attr_accessor :name, :breed, :age, :url
   
   def self.today
-    puts <<-LIST
-     1. Boss - Chihuahua - 3 years
-     2. Tidus - Boxer English Bulldog mix - 2 years
-     3. Milo - Shih Tzu - 10 months
-     4. Lennox - Boxer Pitbull Terrier mix - 10 months
-     5. Kodiak - Golden Retriever - 10 years
-     6. Blackie - American Cocker Spaniel - 4 months
-     7. Bola - German Shepard Border Collie mix - 11 years
-     8. Manchawi - Xoloitzcuintle - 10 years
-     LIST
      dog_1 = self.new
      dog_1.name = "Boss"
      dog_1.breed = "Chihuahua"
@@ -60,6 +50,8 @@ class DogOfTheDay::Dog
      dog_8.breed = " Xoloitzcuintle"
      dog_8.age = "10 years"
      dog_8.url = "http://dogoftheday.com/"
+     
+     [dog_1, dog_2, dog_3, dog_4, dog_5, dog_6, dog_7, dog_8]
   end
   
   
