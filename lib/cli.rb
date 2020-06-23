@@ -10,6 +10,9 @@ class DogOfTheDay::CLI
   def list_dogs
     puts "Today's Dog Of The Day:"
     @dogs = DogOfTheDay::Dog.today
+    @dogs.each.with_index(1) do |dog, num|
+      puts "#{num}. #{dog.name} - #{dog.breed} - #{dog.age}"
+    end
   end
   
   def menu
@@ -18,7 +21,7 @@ class DogOfTheDay::CLI
       puts "Enter the number of the dog you would like more info on or type list to see the dogs again or type exit:"
       input = gets.strip.downcase
       if input.to_i > 0 
-        puts @dogs[input.to_i -1]
+        puts @dogs[input.to_i-1]
        elsif
        input == "list"
         list_dogs
