@@ -5,3 +5,5 @@ source "https://rubygems.org"
 
 gem "bundler", "~> 2.0"
 gem "rake", "~> 12.3.3"
+
+gem "pry", "~> 0.13.1"
