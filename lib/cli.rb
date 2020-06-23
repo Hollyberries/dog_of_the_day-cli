@@ -22,7 +22,7 @@ class DogOfTheDay::CLI
       input = gets.strip.downcase
       if input.to_i > 0
         the_dog = @dogs[input.to_i-1]
-        puts "#{num}. #{dog.name} - #{dog.breed} - #{dog.age}"
+        puts "#{the_dog.name} - #{the_dog.breed} - #{the_dog.age}"
       elsif
        input == "list"
         list_dogs

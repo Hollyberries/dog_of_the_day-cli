@@ -3,6 +3,11 @@ class DogOfTheDay::Dog
   attr_accessor :name, :breed, :age, :url
   
   def self.today
+    self.scrape_dogs
+  end
+  
+  
+  def self.scrape_dogs
      dog_1 = self.new
      dog_1.name = "Boss"
      dog_1.breed = "Chihuahua"
