@@ -8,6 +8,9 @@ class DogOfTheDay::Dog
   
   
   def self.scrape_dogs
+    
+    dogs = []
+    
      dog_1 = self.new
      dog_1.name = "Boss"
      dog_1.breed = "Chihuahua"
@@ -56,7 +59,11 @@ class DogOfTheDay::Dog
      dog_8.age = "10 years"
      dog_8.url = "http://dogoftheday.com/"
      
-     [dog_1, dog_2, dog_3, dog_4, dog_5, dog_6, dog_7, dog_8]
+     dogs
+  end
+  
+  def scrape_site
+    
   end
   
   
