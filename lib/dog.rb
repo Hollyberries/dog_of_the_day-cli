@@ -11,6 +11,8 @@ class DogOfTheDay::Dog
     
     dogs = []
     
+    dogs << self.scrape_site
+    
      dog_1 = self.new
      dog_1.name = "Boss"
      dog_1.breed = "Chihuahua"
@@ -63,7 +65,7 @@ class DogOfTheDay::Dog
   end
   
   def scrape_site
-    
+    doc = Nokogiri::HTML(open("http://dogoftheday.com/"))
   end
   
   
