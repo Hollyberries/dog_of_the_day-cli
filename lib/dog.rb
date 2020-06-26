@@ -2,14 +2,7 @@ class DogOfTheDay::Dog
   
   attr_accessor :name, :breed, :age, :url
   
-  def initialize(name = nil, breed = nil, age = nil)
-  @name = name
-  @breed = breed
-  @age = age
-  @url = url
-  end
-  
-  
+ 
   def self.today
     self.scrape_dogs
   end
@@ -25,7 +18,7 @@ class DogOfTheDay::Dog
   end
   
   
-  def scrape_site
+  def self.scrape_site
     url = "http://dogoftheday.com/"
     page = open(url)
     doc = Nokogiri::HTML(open("http://dogoftheday.com"))
@@ -35,7 +28,6 @@ class DogOfTheDay::Dog
     links = doc.css
     links_filtered = links[-8,8]
     
-    binding.pry
   end
   
   

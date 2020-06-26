@@ -1,6 +1,6 @@
 class DogOfTheDay::CLI
   
-  
+ 
   def call 
     list_dogs
     menu
